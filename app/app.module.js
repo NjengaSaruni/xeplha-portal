@@ -1,7 +1,7 @@
 'use strict';
 
-// Define the `phonecatApp` module
-angular.module('phonecatApp', [
-  // ...which depends on the `phoneList` module
-  'phoneList'
+// Define the `xelphaApp` module
+angular.module('xelphaApp', [
+  // ...which depends on the `drugList` module
+  'drugList'
 ]);
