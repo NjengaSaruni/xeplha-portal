@@ -1,5 +1,15 @@
+<div class="col-md-2">
+  Search: <input ng-model="$ctrl.query" />
+</div>
+<p>
+  Sort by:
+  <select ng-model="$ctrl.orderProp">
+    <option value="name">Alphabetical</option>
+    <option value="age">Newest</option>
+  </select>
+</p>
 <ul>
-  <li ng-repeat="drug in $ctrl.drugs">
+  <li ng-repeat="drug in $ctrl.drugs | filter:$ctrl.query  | orderBy:$ctrl.orderProp">
     <span>{{drug.name}}</span>
     <p>{{drug.snippet}}</p>
   </li>
